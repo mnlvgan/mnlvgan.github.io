@@ -23,8 +23,11 @@
   .section-container {
     display: block;
   }
-  .skills-containers {
-    flex-direction: column;
+  .skills-grid,
+  .project-grid,
+  .project-card,
+  .project-card--reverse {
+    grid-template-columns: 1fr;
   }
   .arrow {
     display: none;
@@ -47,6 +50,15 @@
   .project-carousel-img,
   .project-img {
     height: 13rem;
+  }
+  .about-highlights {
+    gap: 0.5rem;
+  }
+  .about-highlights span {
+    font-size: 0.82rem;
+  }
+  .skill-card {
+    padding: 1rem 0;
   }
   
   /* Education tablet adjustment */
@@ -79,8 +91,8 @@
   .btn-container {
     flex-wrap: wrap;
   }
-  .skill-card {
-    min-width: 100%;
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
   .contact-info-container {
     margin: 0;
@@ -107,6 +119,13 @@
   }
   .project-carousel-counter {
     font-size: 0.72rem;
+  }
+  .project-card,
+  .project-card--reverse {
+    gap: 1rem;
+  }
+  .project-actions {
+    justify-content: center;
   }
   .section__pic-container {
     width: auto;

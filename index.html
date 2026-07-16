@@ -73,21 +73,15 @@
                 <img src="./assets/about-pic.jpg" alt="About picture" class="about-pic"/>
             </div>
             <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img src="./assets/experience.png" alt="experience icon" class="icon"/>
-                        <h3>Experience</h3>
-                        <p>1+year <br/>Basic Programming</p>
-                    </div>
-                    <div class="details-container">
-                        <img src="./assets/education.png" alt="education icon" class="icon"/>
-                        <h3>Education</h3>
-                        <p>Bachelor of Science in Information Technology <br>(currently taking)</p>
-                    </div>
-                </div>
                 <div class="text-container">
                     <p>
-                        I’m Vincent Gilbert A. Nuñez, an Information Technology student at Mapúa Malayan Colleges Laguna. I enjoy biking, building practical projects, and learning the tools that turn ideas into working systems.</p>
+                        I’m Vincent Gilbert A. Nuñez, an Information Technology student at Mapúa Malayan Colleges Laguna. I like building practical projects, learning useful tools, and keeping things simple, clean, and functional.
+                    </p>
+                </div>
+                <div class="about-highlights">
+                    <span>Information Technology Student</span>
+                    <span>Mapúa Malayan Colleges Laguna</span>
+                    <span>Biking enthusiast</span>
                 </div>
             </div>
         </div>
@@ -97,39 +91,39 @@
         <p class="section__text__p1">My Technical Skills</p>
         <h1 class="title">Skills</h1>
         <div class="experience-details-container">
-            <div class="about-containers skills-containers">
-                <div class="details-container skill-card">
+            <div class="skills-grid">
+                <div class="skill-card">
                     <h2 class="experience-sub-title">Frontend</h2>
-                    <ul class="skill-list">
-                        <li>JavaScript</li>
-                        <li>CSS</li>
-                        <li>HTML</li>
-                    </ul>
+                    <div class="skill-list">
+                        <span>JavaScript</span>
+                        <span>CSS</span>
+                        <span>HTML</span>
+                    </div>
                 </div>
-                <div class="details-container skill-card">
+                <div class="skill-card">
                     <h2 class="experience-sub-title">Programming</h2>
-                    <ul class="skill-list">
-                        <li>Python</li>
-                        <li>C#</li>
-                        <li>PHP</li>
-                        <li>SQL</li>
-                    </ul>
+                    <div class="skill-list">
+                        <span>Python</span>
+                        <span>C#</span>
+                        <span>PHP</span>
+                        <span>SQL</span>
+                    </div>
                 </div>
-                <div class="details-container skill-card">
+                <div class="skill-card">
                     <h2 class="experience-sub-title">Database</h2>
-                    <ul class="skill-list">
-                        <li>MySQL</li>
-                        <li>Oracle</li>
-                        <li>PostgreSQL</li>
-                    </ul>
+                    <div class="skill-list">
+                        <span>MySQL</span>
+                        <span>Oracle</span>
+                        <span>PostgreSQL</span>
+                    </div>
                 </div>
-                <div class="details-container skill-card">
+                <div class="skill-card">
                     <h2 class="experience-sub-title">Mobile</h2>
-                    <ul class="skill-list">
-                        <li>Kotlin</li>
-                        <li>Jetpack Compose</li>
-                        <li>Ktor</li>
-                    </ul>
+                    <div class="skill-list">
+                        <span>Kotlin</span>
+                        <span>Jetpack Compose</span>
+                        <span>Ktor</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -156,21 +150,24 @@
         <p class="section__text__p1">Browse My Recent</p>
         <h1 class="title">Projects</h1>
         <div class="experience-details-container">
-            <div class="about-containers project-grid">
-                <div class="details-container color-container project-card">
-                    <div class="project-media">
+            <div class="project-grid">
+                <div class="project-card project-card--reverse">
+                    <div class="project-media project-media--soft">
                         <img src="./assets/project-1.jpg" alt="4PICS 1WORD project preview" class="project-img"/>
                     </div>
-                    <h2 class="experience-sub-title project-title">4PICS 1WORD</h2>
-                    <p class="project-description">A visual word puzzle game where players connect four images, use hints wisely, and guess the hidden word.</p>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/mnlvgan/4pics_1word'">
+                    <div class="project-content">
+                        <p class="project-kicker">Game project</p>
+                        <h2 class="experience-sub-title project-title">4PICS 1WORD</h2>
+                        <p class="project-description">A visual word puzzle game where players connect four images, use hints wisely, and guess the hidden word.</p>
+                        <div class="btn-container project-actions">
+                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/mnlvgan/4pics_1word'">
                             Github
-                        </button>
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div class="details-container color-container project-card">
-                    <div class="project-carousel" data-carousel data-images='[
+                <div class="project-card">
+                    <div class="project-carousel project-media--soft" data-carousel data-images='[
                         {"src":"./assets/project 2/1.carebylogo.png","alt":"CareBy logo"},
                         {"src":"./assets/project 2/2.register.png","alt":"CareBy register screen"},
                         {"src":"./assets/project 2/3.login.png","alt":"CareBy login screen"},
@@ -187,12 +184,15 @@
                         <button type="button" class="project-carousel-btn project-carousel-btn-next" data-carousel-next aria-label="Next CareBy screenshot">›</button>
                         <span class="project-carousel-counter" data-carousel-counter>1 / 10</span>
                     </div>
-                    <h2 class="experience-sub-title project-title">CareBy</h2>
-                    <p class="project-description">CareBy is a WebForms appointment system for users and therapists. It covers registration, profiles, booking, and schedule management.</p>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/mnlvgan'">
-                            Github
-                        </button>
+                    <div class="project-content">
+                        <p class="project-kicker">Web system</p>
+                        <h2 class="experience-sub-title project-title">CareBy</h2>
+                        <p class="project-description">CareBy is a WebForms appointment system for users and therapists. It covers registration, profiles, booking, and schedule management.</p>
+                        <div class="btn-container project-actions">
+                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/mnlvgan'">
+                                Github
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
