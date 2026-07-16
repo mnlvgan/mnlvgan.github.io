@@ -3,249 +3,314 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vincent Nunez - Software Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
+    <!-- Desktop Navigation -->
     <nav id="desktop-nav">
-        <div class="logo">Lil Uzi Bert</div>
+        <div class="logo">Vincent Nunez</div>
         <div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
+
+    <!-- Mobile Hamburger Navigation -->
     <nav id="hamburger-nav">
-        <div class="logo">Lil Uzi Bert</div>
+        <div class="logo">Vincent Nunez</div>
         <div class="hamburger-menu">
-            <div class="hamburger-icon"onclick="toggleMenu()">
+            <div class="hamburger-icon" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <div class="menu-links">
                 <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#education" onclick="toggleMenu()">Education</a></li>
+                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
                 <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#certifications" onclick="toggleMenu()">Certifications</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-
             </div>
         </div>
     </nav>
+
+    <!-- Profile Section -->
     <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/profile_pic.jpg" alt="Profile pciture">
+        <div class="section__pic-container animate">
+            <img src="./assets/profile_pic.jpg" alt="Vincent Nunez Profile Picture">
         </div>
         <div class="section__text animate">
             <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Vincent Nunez</h1>
-            <p class="section__text__p2">MMCL Student</p>
+            <h1 class="title font-gradient">Vincent Nunez</h1>
+            <p class="section__text__p2">IT Specialist & Developer</p>
             <div class="btn-container">
-                <button 
-                class="btn btn-color-2"
-                onclick="window.open('./assets/resume-example.pdf')"
-                >Download CV
-                </button>
-                <button 
-                class="btn btn-color-1"
-                onclick="location.href='./#contact'"
-                >Contact Info
-                </button>
+                <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">Download CV</button>
+                <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
             </div>
             <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My Linkedin profile" class="icon profile-icon" onclick="location.href='https://www.linkedin.com/in/vincent-gilbert-nu%C3%B1ez-b0b4162a1/'"/>
-                <img src="./assets/github.png" alt="My Github profile" class="icon profile-icon" onclick="location.href='https://github.com/mnlvgan'"/>
+                <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon profile-icon" onclick="location.href='https://www.linkedin.com/in/vincent-gilbert-nu%C3%B1ez-b0b4162a1/'"/>
+                <img src="./assets/github.png" alt="My GitHub profile" class="icon profile-icon" onclick="location.href='https://github.com/mnlvgan'"/>
             </div>
         </div>
     </section>
+
+    <!-- About Section -->
     <section id="about" class="animate">
         <p class="section__text__p1">Get To Know More</p>
         <h1 class="title">About Me</h1>
         <div class="section-container">
             <div class="section__pic-container">
-                <img src="./assets/about-pic.jpg" alt="About pciture" class="about-pic"/>
+                <img src="./assets/about-pic.jpg" alt="About Vincent" class="about-pic"/>
             </div>
             <div class="about-details-container">
                 <div class="about-containers">
-                    <div class="details-container">
-                        <img src="./assets/experience.png" alt="experience icon" class="icon"/>
+                    <div class="details-container glass">
+                        <img src="./assets/experience.png" alt="Experience icon" class="icon"/>
                         <h3>Experience</h3>
-                        <p>1+year <br/>Basic Programming</p>
-                    </div>
-                    <div class="details-container">
-                        <img src="./assets/education.png" alt="education icon" class="icon"/>
-                        <h3>Education</h3>
-                        <p>Bachelor of Science in Information Technology <br>(currently taking)</p>
-
-
+                        <p>1+ Year <br/>Programming & Embedded Systems</p>
                     </div>
                 </div>
-                <div class="text-container">
+                <div class="text-container glass">
                     <p>
-                        Hey there! I'm Vincent Gilbert A. Nuñez, currently diving into the world of Information Technology at Mapua Malayan Colleges Laguna. I'm a biking enthusiast, finding joy in the freedom two wheels can bring. Proudly a 2nd-year student, I kickstarted my academic journey after cruising through junior and senior high school at Daraga National High School. Here's to the exciting ride ahead! 🚴‍♂️📚</p>
+                        Hey there! I'm Vincent Gilbert A. Nuñez, an Information Technology student specializing in development, custom integration, and secure application designs at Mapúa Malayan Colleges Laguna. I enjoy writing high-performance code, building responsive interfaces, and working on microcontrollers. Off-screen, I'm a biking enthusiast who loves exploring the physical world with the same intensity I bring to my coding environments. Here's to the exciting tech ride ahead! 🚴‍♂️📚
+                    </p>
                 </div>
             </div>
         </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'"/>
     </section>
-    <section id="experience" class="animate">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Programming/Frontend Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
-                            <div>
-                                <h3>Python</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
-                            <div>
-                                <h3>C#</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
-                            <div>
-                                <h3>C++</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
-                            <div>
-                                <h3>JavaScript</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
-                            <div>
-                                <h3>CSS</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                    </div>
+
+    <!-- Education Section -->
+    <section id="education" class="animate">
+        <p class="section__text__p1">My Academic Pathway</p>
+        <h1 class="title">Education</h1>
+        <div class="timeline-container">
+            <div class="timeline-item glass">
+                <div class="timeline-dot"></div>
+                <div class="timeline-header">
+                    <h3>Mapúa Malayan Colleges Laguna</h3>
+                    <span class="timeline-date">August 2022 – Present</span>
                 </div>
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Backend Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
-                            <div>
-                                <h3>Git</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
-                            <div>
-                                <h3>Node JS</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        
-                    </div>
+                <p class="timeline-degree">Bachelor of Science in Information Technology</p>
+                <ul class="timeline-details">
+                    <li>Dean's Lister (A.Y. 2022–2025)</li>
+                </ul>
+            </div>
+            <div class="timeline-item glass">
+                <div class="timeline-dot"></div>
+                <div class="timeline-header">
+                    <h3>Daraga National High School</h3>
+                    <span class="timeline-date">August 2020 – 2022</span>
+                </div>
+                <p class="timeline-degree">ICT Strand – Computer Systems Servicing NC II</p>
+                <ul class="timeline-details">
+                    <li>Graduated with Honors</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="animate">
+        <p class="section__text__p1">Explore My Tech Stack</p>
+        <h1 class="title">Skills</h1>
+        <div class="skills-grid">
+            <div class="skills-card glass">
+                <h3>Frontend</h3>
+                <div class="skills-badges">
+                    <span class="badge"><i class="devicon">HTML</i></span>
+                    <span class="badge"><i class="devicon">CSS</i></span>
+                    <span class="badge"><i class="devicon">JavaScript</i></span>
+                </div>
+            </div>
+            <div class="skills-card glass">
+                <h3>Backend</h3>
+                <div class="skills-badges">
+                    <span class="badge"><i class="devicon">Node.js</i></span>
+                    <span class="badge"><i class="devicon">PHP</i></span>
+                </div>
+            </div>
+            <div class="skills-card glass">
+                <h3>Programming</h3>
+                <div class="skills-badges">
+                    <span class="badge"><i class="devicon">Python</i></span>
+                    <span class="badge"><i class="devicon">C#</i></span>
+                    <span class="badge"><i class="devicon">SQL</i></span>
+                </div>
+            </div>
+            <div class="skills-card glass">
+                <h3>Mobile Development</h3>
+                <div class="skills-badges">
+                    <span class="badge"><i class="devicon">Kotlin</i></span>
+                    <span class="badge"><i class="devicon">Jetpack Compose</i></span>
+                    <span class="badge"><i class="devicon">Ktor</i></span>
+                </div>
+            </div>
+            <div class="skills-card glass">
+                <h3>Databases</h3>
+                <div class="skills-badges">
+                    <span class="badge"><i class="devicon">MySQL</i></span>
+                    <span class="badge"><i class="devicon">Oracle Database</i></span>
+                    <span class="badge"><i class="devicon">PostgreSQL</i></span>
+                </div>
+            </div>
+            <div class="skills-card glass">
+                <h3>Tools</h3>
+                <div class="skills-badges">
+                    <span class="badge"><i class="devicon">Git</i></span>
                 </div>
             </div>
         </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'"/>
     </section>
+
+    <!-- Projects Section -->
     <section id="projects" class="animate">
         <p class="section__text__p1">Browse My Recent</p>
         <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-            <div class="details-container color-container">
+        <div class="projects-grid">
+            <!-- Project 1 (UNTOUCHED / RETAINS ORIGINAL STRUCT & ASSETS) -->
+            <div class="details-container color-container glass">
                 <div class="article-container">
                     <img src="./assets/project-1.jpg" alt="Project 1" class="project-img"/>
                     <p class="project-description">Dive into the captivating world of <strong>'4Pics 1Word'</strong>! Solve visual puzzles, connect the dots between four images, and guess the hidden word. Use hints wisely and skip levels when needed. Earn coins by cracking the puzzles and enjoy the thrill of each level's mystery!</p>
                 </div>
                 <h2 class="experience-sub-title project-title">4PICS 1WORD</h2>
-                
                 <div class="btn-container">
                     <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/mnlvgan/4pics_1word'">
                         Github
                     </button>
                 </div>
             </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/project-1.jpg" alt="Project 1" class="project-img"/>
-                    <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur aut quod vero. Dolorem ipsa sed natus consequatur? Officiis modi sint perferendis distinctio dolorum nulla nostrum blanditiis quia fugit rerum! Reprehenderit?</p>
+
+            <!-- Project 2 (UPDATED INTERACTION AND ADVANCED IMAGE GALLERY) -->
+            <div class="details-container color-container glass project-interactive-card" id="project-card-2">
+                <div class="project-card-content">
+                    <img src="./assets/project-2.png" alt="Project 2 Thumbnail" class="project-img"/>
+                    <h2 class="experience-sub-title project-title">CareBy App</h2>
                 </div>
-                <h2 class="experience-sub-title project-title">Lorem, ipsum.</h2>
-                
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
-                        Github
-                    </button>
+                <div class="card-overlay">
+                    <button class="btn btn-color-1 overlay-btn" onclick="openGallery()">View Project</button>
                 </div>
             </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/project-1.jpg" alt="Project 1" class="project-img"/>
-                    <p class="project-description">Dive into the captivating world of '4Pics 1Word'! Solve visual puzzles, connect the dots between four images, and guess the hidden word. Use hints wisely and skip levels when needed. Earn coins by cracking the puzzles and enjoy the thrill of each level's mystery!</p>
+
+            <!-- Project 3 (UPDATED INTERACTION) -->
+            <div class="details-container color-container glass project-interactive-card">
+                <div class="project-card-content">
+                    <img src="./assets/project-3.png" alt="Project 3 Thumbnail" class="project-img"/>
+                    <h2 class="experience-sub-title project-title">Eco-Assess River Tool</h2>
                 </div>
-                <h2 class="experience-sub-title project-title">Lorem, ipsum.</h2>
-                
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
-                        Github
-                    </button>
+                <div class="card-overlay">
+                    <button class="btn btn-color-1 overlay-btn" onclick="location.href='https://github.com/mnlvgan'">View Details</button>
                 </div>
             </div>
         </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'"/>
     </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="animate">
+        <p class="section__text__p1">My Validated Achievements</p>
+        <h1 class="title">Certifications</h1>
+        <div class="certificates-grid">
+            <div class="certificate-card glass" onclick="openCertificateModal('./assets/certificates/Cloud Computing Fundamentals.jpg', 'Cloud Computing Fundamentals')">
+                <div class="cert-img-container">
+                    <img src="./assets/certificates/Cloud Computing Fundamentals.jpg" alt="Cloud Computing Fundamentals Cert">
+                </div>
+                <h3>Cloud Computing Fundamentals</h3>
+            </div>
+            <div class="certificate-card glass" onclick="openCertificateModal('./assets/certificates/CodeChum Python Course.jpg', 'CodeChum Python Course')">
+                <div class="cert-img-container">
+                    <img src="./assets/certificates/CodeChum Python Course.jpg" alt="CodeChum Python Course Cert">
+                </div>
+                <h3>CodeChum Python Course</h3>
+            </div>
+            <div class="certificate-card glass" onclick="openCertificateModal('./assets/certificates/CCNA Introduction to Networks.jpg', 'CCNA Introduction to Networks')">
+                <div class="cert-img-container">
+                    <img src="./assets/certificates/CCNA Introduction to Networks.jpg" alt="CCNA Introduction to Networks Cert">
+                </div>
+                <h3>CCNA Introduction to Networks</h3>
+            </div>
+            <div class="certificate-card glass" onclick="openCertificateModal('./assets/certificates/Comptia Tech+.jpg', 'Comptia Tech+')">
+                <div class="cert-img-container">
+                    <img src="./assets/certificates/Comptia Tech+.jpg" alt="CompTIA Tech+ Cert">
+                </div>
+                <h3>CompTIA Tech+</h3>
+            </div>
+            <div class="certificate-card glass" onclick="openCertificateModal('./assets/certificates/Python.jpg', 'Python Certificate')">
+                <div class="cert-img-container">
+                    <img src="./assets/certificates/Python.jpg" alt="Python Cert">
+                </div>
+                <h3>Python Programming</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact">
         <p class="section__text__p1">Get in Touch</p>
         <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
+        <div class="contact-info-upper-container glass">
             <div class="contact-info-container">
                 <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon"/>
                 <p><a href="mailto:nunezvincentgilbert@gmail.com">nunezvincentgilbert@gmail.com</a></p>
-
             </div>
             <div class="contact-info-container">
-                <img src="./assets/linkedin.png" alt="Linkedin icon" class="icon contact-icon"/>
+                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon"/>
                 <p><a href="https://www.linkedin.com/in/vincent-gilbert-nu%C3%B1ez-b0b4162a1/">LinkedIn</a></p>
-                
             </div>
         </div>
-        
     </section>
+
+    <!-- Footer Section -->
     <footer>
         <nav>
             <div class="nav-links-container">
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
-        <p>Copyright &#169 2002 Vincent Nunez. All Rights Reserved.</p>
+        <p>Copyright &#169; 2026 Vincent Nunez. All Rights Reserved.</p>
     </footer>
+
+    <!-- MODERN MODAL FOR PROJECT 2 GALLERY -->
+    <div id="gallery-modal" class="modal-overlay" onclick="closeGalleryModal(event)">
+        <div class="modal-content glass" onclick="event.stopPropagation()">
+            <button class="modal-close-btn" onclick="forceCloseGallery()">&times;</button>
+            <div class="gallery-image-container">
+                <img id="gallery-img" src="" alt="Gallery Image">
+            </div>
+            <div class="gallery-controls">
+                <button class="gallery-nav-btn prev-btn" onclick="navigateGallery(-1)">&#8592;</button>
+                <span id="gallery-counter">1 / 10</span>
+                <button class="gallery-nav-btn next-btn" onclick="navigateGallery(1)">&#8594;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CERTIFICATES MODAL -->
+    <div id="cert-modal" class="modal-overlay" onclick="closeCertModal(event)">
+        <div class="modal-content glass" onclick="event.stopPropagation()">
+            <button class="modal-close-btn" onclick="forceCloseCert()">&times;</button>
+            <div class="gallery-image-container">
+                <img id="cert-modal-img" src="" alt="Certificate Large View">
+            </div>
+            <h3 id="cert-modal-title" style="margin-top: 1rem; color: #fff; text-align: center;">Certificate Name</h3>
+        </div>
+    </div>
+
     <script src="script.js"></script>
-    
 </body>
 </html>
