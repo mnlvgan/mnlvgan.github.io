@@ -1,10 +1,10 @@
 @media screen and (max-width: 1400px) {
-  #profile {
-    height: auto;
-    margin-bottom: 4rem;
+  #pofile {
+    height: 83vh;
+    margin-bottom: 6rem;
   }
-  section {
-    margin: 0 5rem;
+  .about-containers {
+    flex-wrap: wrap;
   }
 }
 
@@ -15,67 +15,85 @@
   #hamburger-nav {
     display: flex;
   }
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
   #profile,
   .section-container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
+    display: block;
   }
-  .section__pic-container {
-    width: 280px;
-    height: 280px;
-    margin: 0 auto;
+  .arrow {
+    display: none;
   }
-  .about-containers {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .about-pic {
-    margin: 0 auto;
+  section,
+  .section-container {
+    height: fit-content;
   }
   section {
-    margin: 0 2rem;
-    padding-top: 6vh;
+    margin: 0 5%;
   }
-  .timeline-container {
-    max-width: 100%;
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  .about-containers {
+    margin-top: 0;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .logo {
-    font-size: 1.4rem;
+  #contact,
+  footer {
+    height: 40vh;
   }
-  .title {
-    font-size: 2.2rem;
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
   }
-  .section__text__p2 {
-    font-size: 1.4rem;
+  article {
+    font-size: 1rem;
   }
-  .timeline-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.2rem;
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
   }
+  .about-containers,
+  .contact-info-upper-container,
   .btn-container {
     flex-wrap: wrap;
-    gap: 0.8rem;
   }
-  .btn {
-    width: 100%;
+  .contact-info-container {
+    margin: 0;
   }
-  .contact-info-upper-container {
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
     flex-direction: column;
-    align-items: flex-start;
+    gap: 0.5rem;
+    text-align: center;
   }
-  .contact-info-container p {
-    font-size: 0.9rem;
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
   }
-  .modal-content {
-    padding: 2rem 1rem 1.5rem;
+  .section__text__p2 {
+    font-size: 1.25rem;
   }
-  .gallery-image-container {
-    height: 40vh;
+  .title {
+    font-size: 2rem;
+  }
+  .text-container {
+    text-align: justify;
   }
 }
