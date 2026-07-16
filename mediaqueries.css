@@ -1,5 +1,5 @@
 @media screen and (max-width: 1400px) {
-  #pofile {
+  #profile {
     height: 83vh;
     margin-bottom: 6rem;
   }
@@ -40,6 +40,14 @@
   }
   .about-containers {
     margin-top: 0;
+  }
+  
+  /* Education tablet adjustment */
+  .edu-grid, .cert-grid {
+    padding: 0 1rem;
+  }
+  .cert-card {
+    width: calc(50% - 1rem);
   }
 }
 
@@ -95,5 +103,18 @@
   }
   .text-container {
     text-align: justify;
+  }
+
+  /* Education mobile adjustment */
+  .edu-card {
+    padding: 1.5rem;
+    min-width: 100%;
+  }
+  .cert-card {
+    width: 100%;
+    min-width: 100%;
+  }
+  .cert-img-wrapper {
+    height: 140px;
   }
 }
