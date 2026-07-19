@@ -50,7 +50,7 @@
             <div class="btn-container">
                 <button 
                 class="btn btn-color-2"
-                onclick="window.open('./assets/resume-example.pdf')"
+                onclick="window.open('./assets/resume/resume.pdf')" 
                 >Download CV
                 </button>
                 <button 
@@ -141,64 +141,55 @@
                         <li>Delivered Tier 1 IT support for end users, troubleshooting hardware and software issues while maintaining high satisfaction and minimal disruption.</li>
                         <li>Executed OS imaging, remediation, and compliance updates across desktop and mini PCs to meet enterprise security and configuration standards.</li>
                     </ul>
+                    <div class="btn-container experience-report-action">
+                        <a class="btn btn-color-1" href="./assets/report_portfolio/report.pdf" download>Download Report</a>
+                    </div>
                 </div>
             </div>
         </div>
         <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'"/>
     </section>
+
     <section id="projects" class="animate">
         <p class="section__text__p1">Browse My Recent</p>
         <h1 class="title">Projects</h1>
+
         <div class="experience-details-container">
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="project-media project-media--soft">
-                        <img src="./assets/project-1.jpg" alt="4PICS 1WORD project preview" class="project-img"/>
-                    </div>
-                    <div class="project-content">
-                        <p class="project-kicker">Game project</p>
-                        <h2 class="experience-sub-title project-title">4PICS 1WORD</h2>
-                        <p class="project-description">A visual word puzzle game where players connect four images, use hints wisely, and guess the hidden word.</p>
-                        <div class="btn-container project-actions">
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/mnlvgan/4pics_1word'">
-                            Github
-                            </button>
-                        </div>
-                    </div>
+            <!-- Project cards are rendered from the data in script.js. -->
+            <div class="project-grid" id="project-grid"></div>
+        </div>
+
+        <img src="./assets/arrow.png"
+            alt="Arrow icon"
+            class="icon arrow"
+            onclick="location.href='./#education'" />
+    </section>
+
+    <!-- Reusable project details dialog, populated from the project data in script.js. -->
+    <div class="project-modal" id="project-modal" aria-hidden="true">
+        <div class="project-modal__backdrop" data-modal-close></div>
+        <section class="project-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+            <button class="project-modal__close" type="button" aria-label="Close project details" data-modal-close>&times;</button>
+            <div class="project-modal__image-wrap">
+                <img id="project-modal-image" class="project-modal__image" src="" alt="">
+            </div>
+            <div class="project-modal__content">
+                <p id="project-modal-category" class="project-kicker"></p>
+                <h2 id="project-modal-title" class="experience-sub-title project-modal__title"></h2>
+                <div class="project-modal__section">
+                    <h3>Overview</h3>
+                    <p id="project-modal-overview"></p>
                 </div>
-                <div class="project-card">
-                    <div class="project-carousel project-media--soft" data-carousel data-images='[
-                        {"src":"./assets/project 2/1.carebylogo.png","alt":"CareBy logo"},
-                        {"src":"./assets/project 2/2.register.png","alt":"CareBy register screen"},
-                        {"src":"./assets/project 2/3.login.png","alt":"CareBy login screen"},
-                        {"src":"./assets/project 2/4.view therapist profiles.png","alt":"CareBy therapist profiles screen"},
-                        {"src":"./assets/project 2/5.book appointment.png","alt":"CareBy book appointment screen"},
-                        {"src":"./assets/project 2/6.display booked appointment details (join video).png","alt":"CareBy booked appointment details screen"},
-                        {"src":"./assets/project 2/7. edit user profile.png","alt":"CareBy edit user profile screen"},
-                        {"src":"./assets/project 2/8.for the therapist end log in.png","alt":"CareBy therapist login screen"},
-                        {"src":"./assets/project 2/9.Find Upcoming Appointments Dashboard.png","alt":"CareBy upcoming appointments dashboard"},
-                        {"src":"./assets/project 2/10.Edit Therapist Profile.png","alt":"CareBy edit therapist profile screen"}
-                    ]'>
-                        <button type="button" class="project-carousel-btn project-carousel-btn-prev" data-carousel-prev aria-label="Previous CareBy screenshot">‹</button>
-                        <img src="./assets/project 2/1.carebylogo.png" alt="CareBy logo" class="project-carousel-img" data-carousel-image/>
-                        <button type="button" class="project-carousel-btn project-carousel-btn-next" data-carousel-next aria-label="Next CareBy screenshot">›</button>
-                        <span class="project-carousel-counter" data-carousel-counter>1 / 10</span>
-                    </div>
-                    <div class="project-content">
-                        <p class="project-kicker">Web system</p>
-                        <h2 class="experience-sub-title project-title">CareBy</h2>
-                        <p class="project-description">CareBy is a WebForms appointment system for users and therapists. It covers registration, profiles, booking, and schedule management.</p>
-                        <div class="btn-container project-actions">
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/mnlvgan'">
-                                Github
-                            </button>
-                        </div>
-                    </div>
+                <div class="project-modal__section">
+                    <h3>Technologies Used</h3>
+                    <ul id="project-modal-technologies" class="project-modal__technologies"></ul>
+                </div>
+                <div class="btn-container project-modal__actions">
+                    <button id="project-modal-github" class="btn btn-color-2 project-btn" type="button">GitHub</button>
                 </div>
             </div>
-        </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#education'"/>
-    </section>
+        </section>
+    </div>
 
     <!-- NEW EDUCATION SECTION -->
     <section id="education" class="animate">
@@ -240,91 +231,84 @@
             </div>
         </div>
 
-        <p class="edu-section-tag" style="margin-top: 5rem;">Certifications</p>
-        <h1 class="title edu-main-title">Verified credentials.</h1>
-        <div class="education-section-container">
-            <div class="cert-grid">
-                <!-- Cert 1 -->
-                <div class="cert-card">
-                    <div class="cert-img-wrapper">
-                        <img src="./assets/certificates/Comptia Tech+.jpg" alt="CompTIA Tech+" class="cert-img">
-                    </div>
-                    <div class="cert-details">
-                        <div class="cert-title-row">
-                            <svg class="cert-shield-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                            </svg>
-                            <h4 class="cert-name">CompTIA Tech+</h4>
-                        </div>
-                        <p class="cert-authority">CompTIA</p>
-                    </div>
+        <div class="credential-section">
+            <p class="edu-section-tag">Credentials</p>
+            <h1 class="title edu-main-title">Verified Credentials</h1>
+            <div class="education-section-container">
+                <div class="cert-grid">
+                    <button class="cert-card" type="button" data-lightbox-image="./assets/certificates/Comptia Tech+.jpg" data-lightbox-title="CompTIA Tech+">
+                        <span class="cert-img-wrapper"><img src="./assets/certificates/Comptia Tech+.jpg" alt="CompTIA Tech+ certificate" class="cert-img"></span>
+                        <span class="cert-details"><span class="cert-name">CompTIA Tech+</span><span class="cert-authority">CompTIA</span></span>
+                    </button>
+                    <button class="cert-card" type="button" data-lightbox-image="./assets/certificates/CCNA Introduction to networks.jpg" data-lightbox-title="CCNA: Introduction to Networks">
+                        <span class="cert-img-wrapper"><img src="./assets/certificates/CCNA Introduction to networks.jpg" alt="CCNA Introduction to Networks certificate" class="cert-img"></span>
+                        <span class="cert-details"><span class="cert-name">CCNA: Introduction to Networks</span><span class="cert-authority">Cisco</span></span>
+                    </button>
+                    <button class="cert-card" type="button" data-lightbox-image="./assets/certificates/Cloud Computing Fundamentals.jpg" data-lightbox-title="Google Cloud Computing Foundations">
+                        <span class="cert-img-wrapper"><img src="./assets/certificates/Cloud Computing Fundamentals.jpg" alt="Google Cloud Computing Foundations certificate" class="cert-img"></span>
+                        <span class="cert-details"><span class="cert-name">Google Cloud Computing Foundations</span><span class="cert-authority">Google Cloud</span></span>
+                    </button>
+                    <button class="cert-card" type="button" data-lightbox-image="./assets/certificates/CodeChum Python Course.jpg" data-lightbox-title="CodeChum Python Course">
+                        <span class="cert-img-wrapper"><img src="./assets/certificates/CodeChum Python Course.jpg" alt="CodeChum Python Course certificate" class="cert-img"></span>
+                        <span class="cert-details"><span class="cert-name">CodeChum Python Course</span><span class="cert-authority">CodeChum</span></span>
+                    </button>
                 </div>
-                <!-- Cert 2 -->
-                <div class="cert-card">
-                    <div class="cert-img-wrapper">
-                        <!-- Points to CCNA Introduction file from assets -->
-                        <img src="./assets/certificates/CCNA Introduction to networks.jpg" alt="CCNA Introduction to networks" class="cert-img">
-                    </div>
-                    <div class="cert-details">
-                        <div class="cert-title-row">
-                            <svg class="cert-shield-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                            </svg>
-                            <h4 class="cert-name">CCNA: Introduction to Networks</h4>
-                        </div>
-                        <p class="cert-authority">Cisco</p>
-                    </div>
+            </div>
+        </div>
+
+        <div class="credential-section">
+            <p class="edu-section-tag">Professional Development</p>
+            <h1 class="title edu-main-title">Seminars</h1>
+            <div class="education-section-container">
+                <div class="cert-grid">
+                    <button class="cert-card" type="button" data-lightbox-image="./assets/seminars/4. Beyond The Breach.jpg" data-lightbox-title="Beyond the Breach">
+                        <span class="cert-img-wrapper"><img src="./assets/seminars/4. Beyond The Breach.jpg" alt="Beyond the Breach seminar certificate" class="cert-img"></span>
+                        <span class="cert-details"><span class="cert-name">Beyond the Breach</span><span class="cert-authority">Cybersecurity Seminar</span></span>
+                    </button>
+                    <button class="cert-card" type="button" data-lightbox-image="./assets/seminars/3. Beyond The Code.jpg" data-lightbox-title="Beyond the Code">
+                        <span class="cert-img-wrapper"><img src="./assets/seminars/3. Beyond The Code.jpg" alt="Beyond the Code seminar certificate" class="cert-img"></span>
+                        <span class="cert-details"><span class="cert-name">Beyond the Code</span><span class="cert-authority">Technology Seminar</span></span>
+                    </button>
+                    <button class="cert-card" type="button" data-lightbox-image="./assets/seminars/1. Linux OS Fundamentals.jpg" data-lightbox-title="Linux Fundamentals">
+                        <span class="cert-img-wrapper"><img src="./assets/seminars/1. Linux OS Fundamentals.jpg" alt="Linux Fundamentals seminar certificate" class="cert-img"></span>
+                        <span class="cert-details"><span class="cert-name">Linux Fundamentals</span><span class="cert-authority">Linux OS Fundamentals</span></span>
+                    </button>
+                    <button class="cert-card" type="button" data-lightbox-image="./assets/seminars/2. Digital Transformation and Smart Information System.jpg" data-lightbox-title="Digital Transformation">
+                        <span class="cert-img-wrapper"><img src="./assets/seminars/2. Digital Transformation and Smart Information System.jpg" alt="Digital Transformation seminar certificate" class="cert-img"></span>
+                        <span class="cert-details"><span class="cert-name">Digital Transformation</span><span class="cert-authority">Smart Information Seminar</span></span>
+                    </button>
+                    <button class="cert-card" type="button" data-lightbox-image="./assets/seminars/6. Head In The Clouds.jpg" data-lightbox-title="Head in the Clouds">
+                        <span class="cert-img-wrapper"><img src="./assets/seminars/6. Head In The Clouds.jpg" alt="Head in the Clouds seminar certificate" class="cert-img"></span>
+                        <span class="cert-details"><span class="cert-name">Head in the Clouds</span><span class="cert-authority">Cloud Computing Seminar</span></span>
+                    </button>
                 </div>
-                <!-- Cert 3 -->
-                <div class="cert-card">
-                    <div class="cert-img-wrapper">
-                        <!-- Points to Cloud Computing Fundamentals file from assets -->
-                        <img src="./assets/certificates/Cloud Computing Fundamentals.jpg" alt="Cloud Computing Fundamentals" class="cert-img">
-                    </div>
-                    <div class="cert-details">
-                        <div class="cert-title-row">
-                            <svg class="cert-shield-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                            </svg>
-                            <h4 class="cert-name">Google Cloud Computing Foundations</h4>
-                        </div>
-                        <p class="cert-authority">Google Cloud</p>
-                    </div>
-                </div>
-                <!-- Cert 4 -->
-                <div class="cert-card">
-                    <div class="cert-img-wrapper">
-                        <img src="./assets/certificates/CodeChum Python Course.jpg" alt="CodeChum Python Course" class="cert-img">
-                    </div>
-                    <div class="cert-details">
-                        <div class="cert-title-row">
-                            <svg class="cert-shield-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                            </svg>
-                            <h4 class="cert-name">CodeChum Python Course</h4>
-                        </div>
-                        <p class="cert-authority">CodeChum</p>
-                    </div>
-                </div>
-                <!-- Cert 5 -->
-                <div class="cert-card">
-                    <div class="cert-img-wrapper">
-                        <img src="./assets/certificates/Python.jpg" alt="Python Certificate" class="cert-img">
-                    </div>
-                    <div class="cert-details">
-                        <div class="cert-title-row">
-                            <svg class="cert-shield-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                            </svg>
-                            <h4 class="cert-name">Python Basics</h4>
-                        </div>
-                        <p class="cert-authority">MCL ACM</p>
-                    </div>
+            </div>
+        </div>
+
+        <div class="credential-section">
+            <p class="edu-section-tag">Community</p>
+            <h1 class="title edu-main-title">Membership</h1>
+            <div class="education-section-container">
+                <div class="cert-grid">
+                    <button class="cert-card" type="button" data-lightbox-image="./assets/seminars/5. CyberSocPH.jpg" data-lightbox-title="CyberSocPH Member">
+                        <span class="cert-img-wrapper"><img src="./assets/seminars/5. CyberSocPH.jpg" alt="CyberSocPH Member certificate" class="cert-img"></span>
+                        <span class="cert-details"><span class="cert-name">CyberSocPH Member</span><span class="cert-authority">Cybersecurity Society of the Philippines</span></span>
+                    </button>
                 </div>
             </div>
         </div>
         <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'"/>
     </section>
+
+    <!-- Reusable certificate lightbox. -->
+    <div class="certificate-lightbox" id="certificate-lightbox" aria-hidden="true">
+        <div class="certificate-lightbox__backdrop" data-lightbox-close></div>
+        <div class="certificate-lightbox__dialog" role="dialog" aria-modal="true" aria-labelledby="certificate-lightbox-title">
+            <button class="certificate-lightbox__close" type="button" aria-label="Close certificate preview" data-lightbox-close>&times;</button>
+            <img id="certificate-lightbox-image" src="" alt="">
+            <p id="certificate-lightbox-title"></p>
+        </div>
+    </div>
 
     <section id="contact">
         <p class="section__text__p1">Get in Touch</p>
